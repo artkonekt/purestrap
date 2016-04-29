@@ -1,0 +1,4 @@
+# Purestrap Documentation
+
+## Getting Started
+
