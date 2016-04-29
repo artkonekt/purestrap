@@ -6,9 +6,6 @@ body
     font-family: $font-copy
     font-weight: 400
 
-.pure-g [class *= "pure-u"]
-    font-family: $font-copy
-
 p, td, th, ul, ol
     +font-size($font-size-base)
 
@@ -24,5 +21,8 @@ h3
 a
     color: $cl-link-default
 
-[data-role="progress-show"]
-    display: none
+/**
+ * Always hide an element when it has the `hidden` HTML attribute.
+ */
+[hidden]
+    display: none !important
