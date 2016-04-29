@@ -1,4 +1,4 @@
-![purestrap](docs/img/purestrap_banner.png logo)
+![purestrap](docs/img/purestrap_banner.png)
 
 Purestrap is a loosely coupled set of [bootstrap 3](http://getbootstrap.com/) compatible css components mixed with [Pure.css's](http://purecss.io) great grid system.
 
