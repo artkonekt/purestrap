@@ -1,3 +1,5 @@
+@import "../configuration/modules/button"
+
 =btn-color($bgcolor, $color)
     color: $color !important
     background-color: $bgcolor
@@ -12,8 +14,7 @@
 .btn
     display: inline-block
     margin-bottom: 0
-    font-family: $font-copy
-    font-weight: 700
+    font-family: $btn-font
     text-align: center
     vertical-align: middle
     touch-action: manipulation
@@ -22,7 +23,7 @@
     // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
     border: 1px solid transparent
     white-space: nowrap
-    +btn-size($padding-base-vertical, $padding-base-horizontal, $btn-font-size-base, $line-height-small, $border-radius-base)
+    +btn-size($siz-padding-base-vertical, $siz-padding-base-horizontal, $btn-font-size-base, $siz-line-height-small, $siz-border-radius-base)
     &[disabled]
         opacity: .65
 
@@ -31,25 +32,25 @@ a
         text-decoration: none
 
 .btn-primary, .btn-action
-    +btn-color($cl-primary, $cl-text)
+    +btn-color($cl-primary, $cl-primary-ontext)
 
 .btn-default
-    +btn-color($cl-btn-default, $cl-white)
+    +btn-color($btn-cl-default-bg, $btn-cl-default-text)
 
 .btn-info
-    +btn-color($cl-info, $cl-white)
+    +btn-color($cl-info, $cl-info-ontext)
 
 .btn-success
-    +btn-color($cl-success, $cl-white)
+    +btn-color($cl-success, $cl-success-ontext)
 
 .btn-warning
-    +btn-color($cl-warning, $cl-text)
+    +btn-color($cl-warning, $cl-warning-ontext)
 
 .btn-danger
-    +btn-color($cl-danger, $cl-white)
+    +btn-color($cl-danger, $cl-danger-ontext)
 
 .btn-inverse
-    +btn-color($cl-btn-default, $cl-white)
+    +btn-color($btn-cl-inverse-bg, $btn-cl-inverse-text)
 
 .btn-link
     background-color: transparent
@@ -62,19 +63,19 @@ a
 // --------------------------------------------------
 
 .btn-xl
-    +btn-size($padding-xl-vertical, $padding-xl-horizontal, $btn-font-size-xl, $line-height-small, $border-radius-large)
+    +btn-size($siz-padding-xl-vertical, $siz-padding-xl-horizontal, $btn-font-size-xl, $siz-line-height-small, $siz-border-radius-large)
 
 .btn-lg
-    +btn-size($padding-large-vertical, $padding-large-horizontal, $btn-font-size-large, $line-height-small, $border-radius-large)
+    +btn-size($siz-padding-large-vertical, $siz-padding-large-horizontal, $btn-font-size-large, $siz-line-height-small, $siz-border-radius-large)
 
 .btn-sm
-    +btn-size($padding-small-vertical, $padding-small-horizontal, $btn-font-size-small, $line-height-small, $border-radius-small)
+    +btn-size($siz-padding-small-vertical, $siz-padding-small-horizontal, $btn-font-size-small, $siz-line-height-small, $siz-border-radius-small)
 
 .btn-xs
     font-weight: 400
     text-transform: uppercase
     font-family: $font-small
-    +btn-size($padding-xs-vertical, $padding-xs-horizontal, $btn-font-size-xs, $line-height-small, $border-radius-small)
+    +btn-size($siz-padding-xs-vertical, $siz-padding-xs-horizontal, $btn-font-size-xs, $siz-line-height-small, $siz-border-radius-small)
 
 .btn
     + .btn

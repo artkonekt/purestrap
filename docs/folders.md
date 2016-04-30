@@ -1,8 +1,6 @@
-# Basics
+# File And Folder Structure
 
-## Files And How To Use Them
-
-### The `sass` Folder
+## The `sass` Folder
 
 The `sass` folder contains the ham in this repo.
 
@@ -23,7 +21,7 @@ From Jonathan Snook's SMACSS book:
 
 `_base.sass` is the file for that.
 
-`_variables.sass` is the source of common customizations, like colors, fonts, margins, etc to be consistent across modules thus through the entire site.
+`_variables.sass` is the source of common customizations, like colors, fonts, margins, etc to be consistent across modules thus through the entire site. It actually glues several configuration files
 
 #### The `states` folder
 
@@ -63,3 +61,9 @@ SMACSS is a bible, isn't it:
 #### The `utils` folder
 
 As expected, they're utils, mixins, etc.
+
+#### The `vendor` folder
+
+It currently only contains the [sass port](https://github.com/JohnAlbin/normalize-scss/) of [normalize](https://github.com/necolas/normalize.css). Since both bootstrap and purecss are built on top of this goodie, Purestrap also incorporates it.
+
+Purestrap is shipping with normalize v4.2.0 and it's configuration (variables) is connected to Purestrap's variables.

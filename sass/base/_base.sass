@@ -4,25 +4,19 @@
 body
     color: $cl-text
     font-family: $font-copy
-    font-weight: 400
 
-p, td, th, ul, ol
+p, td, th, ul, ol, blockquote
     +font-size($font-size-base)
 
-h1, h2, h3
+h1, h2, h3, h4
+    color: $cl-text-heading
     font-family: $font-heading
-
-h2
-    +font-size($font-size-xl)
-
-h3
-    +font-size($font-size-lg)
 
 a
     color: $cl-link-default
 
-/**
- * Always hide an element when it has the `hidden` HTML attribute.
- */
-[hidden]
-    display: none !important
+blockquote
+    border-left: 3px solid $cl-primary
+    padding: 1em
+    font-style: italic
+

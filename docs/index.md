@@ -4,7 +4,7 @@
 
 The component set is basically a mixture of purecss's grid system and several basic bootstrap components.
 
-It also adds nice custom responsive layout that fits most of the devices used as of 2016.
+It also provides with a nice dead simple responsive layout that fits most of the devices used as of 2016.
 
 ### Why Another Toolset?
 
@@ -26,6 +26,7 @@ OK I described what not. This thing aims to overcome the following issues met du
 
 ## Let's Start!
 
-- [Basics](basics.md)
+- [File And Folder Structure](folders.md)
 - [Layout](layout.md)
+- [Typography](fonts.md)
 

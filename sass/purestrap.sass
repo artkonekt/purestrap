@@ -1,7 +1,12 @@
+@import "vendor/normalize/normalize"
+@include normalize()
 @import "layout/layout"
 @import "utils/responsive_helpers"
 @import "utils/text"
 @import "utils/utils"
+
+@import "layout/pure-grid"
+@import "layout/pure-grid-responsive"
 
 @import "modules/logo"
 @import "modules/menu"
@@ -11,12 +16,10 @@
 @import "modules/featured"
 @import "modules/button"
 @import "modules/icon"
-@import "modules/listing"
-@import "modules/product"
 @import "modules/page"
-@import "modules/filter"
+
 @import "modules/form"
-@import "modules/cart"
+
 @import "modules/table"
 @import "modules/alert"
 @import "modules/spinbox"
@@ -24,8 +27,13 @@
 @import "modules/sidebar"
 @import "modules/triangle-border"
 @import "integrations/owlcarousel"
-@import "modules/product-slider"
+
 @import "modules/review"
 @import "modules/label"
 @import "modules/modal"
-@import "modules/gridext"
+
+@import "modules/ecommerce/listing"
+@import "modules/ecommerce/filter"
+@import "modules/ecommerce/product"
+@import "modules/ecommerce/cart"
+@import "modules/ecommerce/product-slider"
