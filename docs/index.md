@@ -27,6 +27,7 @@ OK I described what not. This thing aims to overcome the following issues met du
 ## Let's Start!
 
 - [File And Folder Structure](folders.md)
+- [Configuration, Customization](configuration.md)
 - [Layout](layout.md)
-- [Typography](fonts.md)
+- [Fonts](fonts.md)
 

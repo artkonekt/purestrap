@@ -1,6 +1,6 @@
 # Configuration
 
-Configuration (customization) is the heart of this thing. The meaning of this framework is exactly that a website should exactly look as it is intended to be, but without coding the repetitive parts from scratch over and over again.
+Configuration (customization) is the heart of this thing. The meaning of this framework is that a website should exactly look as it is intended to be, but without coding the repetitive parts from scratch over and over again.
 
 ## Variables
 

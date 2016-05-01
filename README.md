@@ -6,3 +6,7 @@ The result is a set of sass files which can be used and customized freely based 
 
 The toolset was built with [SMACSS](https://smacss.com/) principles in mind.
 
+## Documentation
+
+The documentations can be found [in the docs folder](docs/index.md).
+
