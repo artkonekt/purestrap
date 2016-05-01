@@ -8,6 +8,22 @@ The idea is that you take the `sass` folder, copy it to your project, use/throw 
 
 `purestrap.sass` is the glue for all the parts and modules. You can either rename it or even have multiple variants of it. It's also the intended way to remove modules/parts you don't want, or to add completely new ones depending on your project's needs.
 
+##### Folders
+
+```
+- base
+- configuration
+  - integrations
+  - modules
+- integrations
+- layout
+- modules
+- states
+- utils
+- vendor
+  - normalize
+```
+
 #### The `base` folder
 
 It contains `_base.sass` and `_variables.sass`.
