@@ -1,3 +1,7 @@
+@import "../configuration/fonts"
+@import "../configuration/sizing"
+@import "../configuration/modules/table"
+
 .table
     width: 100%
     max-width: 100%
@@ -9,7 +13,7 @@
     > tbody > tr > th,
     > thead > tr > th
         vertical-align: top
-        border-top: 1px solid $cl-separator
+        border-top: 1px solid $table-cl-cell-border
         padding: $siz-padding-small-vertical $siz-padding-small-horizontal
         line-height: 1.42857143
         +font-size($font-size-sm)
@@ -20,7 +24,7 @@
             border-top: 0
         > tr > th
             vertical-align: bottom
-            border-bottom: 1px solid $cl-separator
+            border-bottom: 1px solid $table-cl-cell-border
 
 .table-striped > tbody > tr:nth-child(odd) > td
-    background-color: $cl-panel-bg
+    background-color: $table-cl-stripe-bg
