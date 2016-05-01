@@ -11,17 +11,17 @@ The idea is that you take the `sass` folder, copy it to your project, use/throw 
 ##### Folders
 
 ```
-- base
-- configuration
-  - integrations
-  - modules
-- integrations
-- layout
-- modules
-- states
-- utils
-- vendor
-  - normalize
+base/               <- Base elements
+configuration/      <- Configuration files
+   integrations/    <- Integration related config files
+   modules/         <- Module config files
+integrations/       <- Style implementation of integrations
+layout/             <- Layout and base style implementation
+modules/            <- Module implementation files
+states/             <- State implementation files
+utils/              <- Utilities by purestrap
+vendor/             <- Vendor stuff that is completely integrated
+   normalize/       <- Normalize.css (sass variant) is the lowest foundation
 ```
 
 #### The `base` folder
