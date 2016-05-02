@@ -2,7 +2,7 @@ title: Purestrap
 author:
     name: Attila Fulop
 
-include: ["demo/_alerts.html", "demo/*.html"]
+include: ["demo/_alerts.html", "demo/*.html", "_buttons.html", "*.html"]
 
 defaults:
   -
