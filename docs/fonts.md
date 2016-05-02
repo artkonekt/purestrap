@@ -1,3 +1,7 @@
+---
+layout: default
+title: Fonts
+---
 # Fonts
 
 The framework itself doesn't import fonts, so it's up to you whether to import fonts from Google fonts or Typekit, etc or to host them locally.

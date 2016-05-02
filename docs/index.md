@@ -1,3 +1,7 @@
+---
+layout: default
+title: Index
+---
 # Purestrap Documentation
 
 ## Introduction

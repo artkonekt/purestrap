@@ -1,3 +1,7 @@
+---
+layout: default
+title: Folders
+---
 # File And Folder Structure
 
 ## The `sass` Folder

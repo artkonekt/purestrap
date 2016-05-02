@@ -1,3 +1,7 @@
+---
+layout: default
+title: Layout
+---
 # Layout
 
 There were several aspects when creating the layout for this toolset:

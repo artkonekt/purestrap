@@ -2,12 +2,12 @@ title: Purestrap
 author:
     name: Attila Fulop
 
-include: ["*.html", "pages"]
+include: ["*.html"]
 
 defaults:
   -
     scope:
-        path: "pages"
+        path: "docs"
         type: "pages"
     values:
         layout: "default"
