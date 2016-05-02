@@ -1,0 +1,87 @@
+<h1>Layout</h1>
+<p>There were several aspects when creating the layout for this toolset:</p>
+<ol>
+<li>Responsiveness: wanted fine-grained possibilities for manipulating what is visible and when across devices;</li>
+<li>Wanted to freely set elements to be within a wrapper or to fit the entire page width, even within a single page;</li>
+<li>Wanted to have the possibility to both 'stick together' grid columns and/or to have gutter between them.</li>
+</ol>
+<h2>Responsive Coolness</h2>
+<p>There are 5 layouts defined out of the box, with these defaults:</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th style="text-align:center">Screen width (px)</th>
+<th style="text-align:center">Screen width (em)</th>
+<th>Wrapper width</th>
+<th>Refer to</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>xs</strong></td>
+<td style="text-align:center">&lt; 568px</td>
+<td style="text-align:center">&lt; 35.5em</td>
+<td>100%</td>
+<td><code>$screen-xs-max</code></td>
+</tr>
+<tr>
+<td><strong>sm</strong></td>
+<td style="text-align:center">568px - 768px</td>
+<td style="text-align:center">35.5em - 48em</td>
+<td>100%</td>
+<td><code>$screen-sm-min</code></td>
+</tr>
+<tr>
+<td><strong>md</strong></td>
+<td style="text-align:center">768px - 1024px</td>
+<td style="text-align:center">48em - 64em</td>
+<td>100%</td>
+<td><code>$screen-md-min</code></td>
+</tr>
+<tr>
+<td><strong>lg</strong></td>
+<td style="text-align:center">1024px - 1280px</td>
+<td style="text-align:center">64em - 80em</td>
+<td>960px (60em)</td>
+<td><code>$screen-lg-min</code></td>
+</tr>
+<tr>
+<td><strong>xl</strong></td>
+<td style="text-align:center">&gt; 1280px</td>
+<td style="text-align:center">&gt; 80em</td>
+<td>1248px (78em)</td>
+<td><code>$screen-xl-min</code></td>
+</tr>
+</tbody>
+</table>
+<p>All these can be changed of course depending on the project's needs. I even had a project where I completely had to get rid of the xl layout - not a problem.</p>
+<h3>Basic Layout Rules</h3>
+<p>Unless you want a completely fluid layout, there are two major classes you need to use for playing with variations: <code>.wrapper</code> and <code>.content</code>.</p>
+<p><em>Wrapper</em> is the class that keeps your elements in the middle of the site, that is the &quot;meat's width&quot;. This will be 100% on mobile layouts and the appropriate fixed width on desktops.</p>
+<p><em>Content</em> is the class that helps you prevent items from &quot;sticking&quot; to edges of the wrapper or the screen. Content is usually a direct child of a wrapper div.</p>
+<p>Example:</p>
+<pre><code>&lt;body&gt;
+  &lt;nav&gt;&lt;!-- Black stripe the fills the entire width--&gt;
+    &lt;div class=&quot;wrapper&quot;&gt;
+      &lt;a href=&quot;#&quot;&gt;menu item&lt;/a&gt;&lt;!-- it always sticks to the wrapper's edges --&gt;
+    &lt;/div&gt;
+  &lt;/nav&gt;
+  &lt;div class=&quot;wrapper&quot;&gt;
+    &lt;div class=&quot;content&quot;&gt;
+      &lt;h1&gt;Title&lt;/h1&gt;
+      &lt;p&gt;This is a normal content...&lt;/p&gt;&lt;!-- sticks to the wrapper's edges on desktop, but has left/right margins on mobile--&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;jumbotron&quot;&gt;&lt;!-- fills entire width (but that has nothing to do with .jumbotron class --&gt;
+    &lt;div class=&quot;wrapper&quot;&gt;
+      &lt;img src=&quot;acme.jpg&quot;&gt; &lt;!-- image that fills the entire wrapper on desktop and the entire screen width on mobile --&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/body&gt;
+</code></pre>
+<p>Result on desktop:</p>
+<p><img src="img/layout_desktop.png" alt="layout_desktop"></p>
+<p>Result on mobile:</p>
+<p><img src="img/layout_mobile.png" alt="layout_mobile"></p>

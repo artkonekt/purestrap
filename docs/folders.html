@@ -1,0 +1,62 @@
+<h1>File And Folder Structure</h1>
+<h2>The <code>sass</code> Folder</h2>
+<p>The <code>sass</code> folder contains the ham in this repo.</p>
+<p>The idea is that you take the <code>sass</code> folder, copy it to your project, use/throw the modules you want, and then start the customization/development. So at the end of the day you won't have to upgrade the underlying purestrap. This is rather a boilerplate concept.</p>
+<p><code>purestrap.sass</code> is the glue for all the parts and modules. You can either rename it or even have multiple variants of it. It's also the intended way to remove modules/parts you don't want, or to add completely new ones depending on your project's needs.</p>
+<h5>Folders</h5>
+<pre><code>base/               &lt;- Base elements
+configuration/      &lt;- Configuration files
+   integrations/    &lt;- Integration related config files
+   modules/         &lt;- Module config files
+integrations/       &lt;- Style implementation of integrations
+layout/             &lt;- Layout and base style implementation
+modules/            &lt;- Module implementation files
+states/             &lt;- State implementation files
+utils/              &lt;- Utilities by purestrap
+vendor/             &lt;- Vendor stuff that is completely integrated
+   normalize/       &lt;- Normalize.css (sass variant) is the lowest foundation
+</code></pre>
+<h4>The <code>base</code> folder</h4>
+<p>It contains <code>_base.sass</code> and <code>_variables.sass</code>.</p>
+<p>From Jonathan Snook's SMACSS book:</p>
+<blockquote>
+<p>A Base rule is applied to an element using an element selector, a
+descendent selector, or a child selector, along with any pseudo-
+classes. It doesn’t include any class or ID selectors. It is defining the default styling for how that element should look in all occurrences
+on the page.</p>
+</blockquote>
+<p><code>_base.sass</code> is the file for that.</p>
+<p><code>_variables.sass</code> is the source of common customizations, like colors, fonts, margins, etc to be consistent across modules thus through the entire site. It actually glues several configuration files</p>
+<h4>The <code>states</code> folder</h4>
+<p>These are similar to modules, but they're not primarily visible things but complement behaviors defined by javascript components.</p>
+<h4>The <code>integrations</code> folder</h4>
+<p>Whenever your project customizes, defines a theme for an external component (eg. owl carousel) you can put the corresponding file here.</p>
+<h4>The <code>layout</code> folder</h4>
+<p>Again, in the SMACSS book:</p>
+<blockquote>
+<p>CSS, by its very nature, is used to lay elements out on the page.
+However, there is a distinction between layouts dictating the major
+and minor components of a page. The minor components—such as
+a callout, or login form, or a navigation item—sit within the scope
+of major components such as a header or footer. I refer to the mi-
+nor components as Modules and will dive into those in the next sec-
+tion. The major components are referred to as Layout styles.</p>
+</blockquote>
+<p>So, this is where all these files go.</p>
+<h4>The <code>modules</code> folder</h4>
+<p>SMACSS is a bible, isn't it:</p>
+<blockquote>
+<p>As briefly mentioned in the previous section, a Module is a more
+discrete component of the page. It is your navigation bars and your
+carousels and your dialogs and your widgets and so on. This is the
+meat of the page. Modules sit inside Layout components. Modules
+can sometimes sit within other Modules, too. Each Module should
+be designed to exist as a standalone component. In doing so, the
+page will be more flexible. If done right, Modules can easily be
+moved to different parts of the layout without breaking</p>
+</blockquote>
+<h4>The <code>utils</code> folder</h4>
+<p>As expected, they're utils, mixins, etc.</p>
+<h4>The <code>vendor</code> folder</h4>
+<p>It currently only contains the <a href="https://github.com/JohnAlbin/normalize-scss/">sass port</a> of <a href="https://github.com/necolas/normalize.css">normalize</a>. Since both bootstrap and purecss are built on top of this goodie, Purestrap also incorporates it.</p>
+<p>Purestrap is shipping with normalize v4.2.0 and it's configuration (variables) is connected to Purestrap's variables.</p>

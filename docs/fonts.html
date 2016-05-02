@@ -1,0 +1,73 @@
+<h1>Fonts</h1>
+<p>The framework itself doesn't import fonts, so it's up to you whether to import fonts from Google fonts or Typekit, etc or to host them locally.</p>
+<p>The framework however defines several simple settings to use for unified font experience regarding the end result.</p>
+<h2>Real And Semantic Font Names</h2>
+<p>Every project has a different font stack like, Lato or Proxima Nova or Robot, etc. These are the <strong>real font names</strong>.</p>
+<p>There is also another 'layer' of fonts like the font used for <em>copy</em> (normal text), font for <em>heading</em>, another for from inputs, sometimes a separate font for small text for better readability, etc. These are the <strong>semantic font names</strong>.</p>
+<p>In order to prevent you from creating a mess and for make it less painful to change fonts later, the framework encourages you to use both in a certain manner.</p>
+<p>Actual font names you set only once, and store it in a real font name variable:</p>
+<pre><code>$font-roboto: Roboto, sans-serif
+$font-roboto-slab: 'Roboto Slab', sans-serif
+</code></pre>
+<p>When defining semantic names use real font name variables:</p>
+<pre><code>$font-copy:    $font-roboto
+$font-heading: $font-roboto-slab
+$font-small:   $font-roboto
+</code></pre>
+<p>Therefore, your modules must use only semantic names. This not only helps to maintain a standard look&amp;feel but also makes it easy to easily setup and change.</p>
+<p>So you'll end up with something like this:</p>
+<pre><code>$font-roboto: Roboto, sans-serif
+$font-roboto-slab: 'Roboto Slab', sans-serif
+
+$font-copy: $font-roboto
+$font-heading: $font-roboto-slab
+
+/* _base.sass: */
+body
+    font-family: $font-copy
+
+h1, h2, h3, h4
+    font-family: $font-heading
+
+/* _menu.sass: */
+.menu
+    font-family: $font-copy
+
+.menu-title
+    font-family: $font-heading
+
+/* _button.sass: */
+.btn
+    font-family: $font-copy
+
+.btn-sm, .btn-xs
+    font-family: $font-small
+
+</code></pre>
+<p>instead of something like that:</p>
+<pre><code>$font-roboto: Roboto, sans-serif
+$font-roboto-slab: 'Roboto Slab', sans-serif
+
+/* _base.sass: */
+body
+    font-family: $font-roboto
+
+h1, h2, h3, h4
+    font-family: $font-roboto-slab
+
+/* _menu.sass: */
+.menu
+    font-family: $font-roboto
+
+.menu-title
+    font-family: $font-roboto-slab
+
+/* _button.sass: */
+.btn
+    font-family: $font-roboto
+
+.btn-sm, .btn-xs
+    font-family: $font-roboto
+
+</code></pre>
+<p>In this case your module would have a direct dependency on your choice of font. This is pretty much like the <a href="https://en.wikipedia.org/wiki/Dependency_injection">dependeny injection pattern</a>.</p>
