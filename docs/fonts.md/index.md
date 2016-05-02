@@ -18,14 +18,14 @@ In order to prevent you from creating a mess and for make it less painful to cha
 
 Actual font names you set only once, and store it in a real font name variable:
 
-```
+```sass
 $font-roboto: Roboto, sans-serif
 $font-roboto-slab: 'Roboto Slab', sans-serif
 ```
 
 When defining semantic names use real font name variables:
 
-```
+```sass
 $font-copy:    $font-roboto
 $font-heading: $font-roboto-slab
 $font-small:   $font-roboto
@@ -35,7 +35,7 @@ Therefore, your modules must use only semantic names. This not only helps to mai
 
 So you'll end up with something like this:
 
-```
+```sass
 $font-roboto: Roboto, sans-serif
 $font-roboto-slab: 'Roboto Slab', sans-serif
 
@@ -67,7 +67,7 @@ h1, h2, h3, h4
 
 instead of something like that:
 
-```
+```sass
 $font-roboto: Roboto, sans-serif
 $font-roboto-slab: 'Roboto Slab', sans-serif
 

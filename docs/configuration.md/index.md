@@ -48,7 +48,7 @@ It's neither evil to have a module that is not a submodule of another but depend
 
 Example:
 
-```
+```sass
 //  configuration/modules/_modal.sass
 @import "panel"
 
@@ -68,7 +68,7 @@ It's absolutely OK for a module to directly import variables from the framework 
 
 It's absolutely OK to do this for example:
 
-```
+```sass
 //  modules/_tables.sass:
 @import "../configuration/fonts"
 @import "../configuration/modules/table"
@@ -84,7 +84,7 @@ It's absolutely OK to do this for example:
 
 instead of this:
 
-```
+```sass
 //  configuration/modules/_tables.sass
 @import "../fonts"
 
