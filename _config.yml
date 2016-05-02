@@ -2,6 +2,13 @@ title: Purestrap
 author:
     name: Attila Fulop
 
-production_url: http://http://artkonekt.github.io/purestrap
 markdown: kramdown
-include: [demo/_*.html]
+include: [demo/*]
+
+defaults:
+  -
+    scope:
+      path: "pages"
+      type: "pages"
+    values:
+      layout: "default"

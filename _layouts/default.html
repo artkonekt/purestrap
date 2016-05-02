@@ -1,9 +1,9 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Purestrap</title>
+    <title>{{ page.title }}</title>
     <link rel='shortcut icon' type='image/x-icon' href='/purestrap/favicon.ico' />
-    <link rel="stylesheet" href="purestrap.css">
+    <link rel="stylesheet" href="/purestrap/purestrap.css">
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,700,300italic,400italic' rel='stylesheet' type='text/css'>
     <style>
         #toc li {
@@ -15,13 +15,10 @@
     </style>
 </head>
 <body>
-    <h1>Purestrap</h1>
-
-    <img src="img/purestrap_banner.png" alt="purestrap" />
-
-    <ul class="toc">
-      <li><a href="docs/">Documentation</a></li>
-      <li><a href="demo/">Demo</a></li>
-    </ul>
+	<div class="wrapper">
+		<div class="content">
+			{{ content }}
+		</div>
+	</div>
 </body>
 </html>
