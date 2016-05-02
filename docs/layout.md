@@ -31,7 +31,7 @@ Unless you want a completely fluid layout, there are two major classes you need 
 
 Example:
 
-```
+```html
 <body>
   <nav><!-- Black stripe the fills the entire width-->
     <div class="wrapper">
