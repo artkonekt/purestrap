@@ -96,13 +96,17 @@ fs.readdir(docsDir, function(err, files) {
 						return console.log(err);
 					}
 
-					var dstFolder = './docs/' + file.slice(0, -3) + '.md';
+					var dstFolder = './docs/' + file;
 					
-					if (!fs.existsSync(dstFolder)){
-					    fs.mkdirSync(dstFolder);
+					if ('index.md' == file) {
+						var dstFile = path.join('./docs', file);
+					} else {
+						if (!fs.existsSync(dstFolder)){
+						    fs.mkdirSync(dstFolder);
+						}
+						var dstFile = path.join(dstFolder, 'index.md');
 					}
 					
-					var dstFile = path.join('./docs/' + file.slice(0, -3) + '.md', 'index.md');
 					//var dstFile = dstFile + '.html';
 					var header  = "---\nlayout: default\ntitle: " + toTitleCase(file.slice(0, -3)) + "\n---\n"
 					fs.writeFile(dstFile, header + data, function(err) {
