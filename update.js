@@ -96,7 +96,13 @@ fs.readdir(docsDir, function(err, files) {
 						return console.log(err);
 					}
 
-					var dstFile = path.join('./docs', file);
+					var dstFolder = './docs/' + file.slice(0, -3) + '.md';
+					
+					if (!fs.existsSync(dstFolder)){
+					    fs.mkdirSync(dstFolder);
+					}
+					
+					var dstFile = path.join('./docs/' + file.slice(0, -3) + '.md', 'index.md');
 					//var dstFile = dstFile + '.html';
 					var header  = "---\nlayout: default\ntitle: " + toTitleCase(file.slice(0, -3)) + "\n---\n"
 					fs.writeFile(dstFile, header + data, function(err) {
