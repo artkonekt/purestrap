@@ -7,13 +7,13 @@ include: ["demo/_alerts.html", "demo/*.html"]
 defaults:
   -
     scope:
-    	path: "pages"
-    	type: "pages"
+        path: "pages"
+        type: "pages"
     values:
-    	layout: "default"
+        layout: "default"
 
 kramdown:
-	input: GFM
- 	syntax_highlighter: rouge
- 	syntax_highlighter_opts:
- 		css_class: 'highlight'
+    input: GFM
+    syntax_highlighter: rouge
+    syntax_highlighter_opts:
+        css_class: 'highlight'
