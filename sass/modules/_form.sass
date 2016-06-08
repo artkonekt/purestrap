@@ -4,6 +4,55 @@
 @import "../configuration/modules/form"
 
 
+.form-group
+    margin-bottom: $form-group-margin-bottom
+
+.form-control 
+    display: block
+    width: 100%
+    // // Make inputs at least the height of their button counterpart (base line-height + padding + border)
+    // height: $input-height
+    padding: $form-input-siz-padding-y $form-input-siz-input-padding-x
+    font-family: $font-copy
+    +font-size($font-size-base)
+    line-height: $form-input-line-height
+    color: $form-input-cl-text
+    background-color: $form-input-cl-bg
+    // Reset unusual Firefox-on-Android default style see https://github.com/necolas/normalize.css/issues/214.
+    background-image: none
+    background-clip: padding-box
+    box-sizing: border-box
+    border: $form-input-siz-border solid $form-input-cl-border
+    +border-radius($siz-border-radius-base)
+
+    // Unstyle the caret on `<select>`s in IE10+.
+    &::-ms-expand 
+        background-color: transparent
+        border: 0
+
+
+    // Placeholder
+    &::placeholder 
+        color: $form-input-cl-placeholder
+        // Override Firefox's unusual default opacity see https://github.com/twbs/bootstrap/pull/11526.
+        opacity: 1
+
+
+    // Disabled and read-only inputs
+    //
+    // HTML5 says that controls under a fieldset > legend:first-child won't be
+    // disabled if the fieldset is disabled. Due to implementation difficulty, we
+    // don't honor that edge case we style them as disabled anyway.
+    &:disabled,
+    &[readonly] 
+        background-color: $form-input-cl-bg-disabled
+        // iOS fix for unreadable disabled content see https://github.com/twbs/bootstrap/issues/11655.
+        opacity: 1
+
+
+    &:disabled 
+        cursor: not-allowed
+
 .form
     width: 100%
     fieldset

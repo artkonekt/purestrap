@@ -23,7 +23,7 @@
     // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
     border: 1px solid transparent
     white-space: nowrap
-    +btn-size($siz-padding-base-vertical, $siz-padding-base-horizontal, $btn-font-size-base, $siz-line-height-small, $siz-border-radius-base)
+    +btn-size($siz-padding-base-vertical, $siz-padding-base-horizontal, $btn-font-size-base, normal, $siz-border-radius-base)
     &[disabled]
         opacity: .65
 
@@ -31,7 +31,7 @@ a
     &.btn
         text-decoration: none
 
-.btn-primary, .btn-action
+.btn-primary
     +btn-color($cl-primary, $cl-primary-ontext)
 
 .btn-default
@@ -84,6 +84,7 @@ a
 .btn-block
     display: block
     width: 100%
+    box-sizing: border-box
 
 .btn
     + .btn
