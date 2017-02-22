@@ -24,3 +24,16 @@
     height: $siz-general-margin
     +bp-md
         height: (2.5*$siz-general-margin)
+    
+.vmiddle-wrapper
+    height: 100%
+    position: relative
+
+.vmiddle-container
+    +transform(translateY(-50%))
+    top: 50%
+    position: relative
+    *:first-child
+        margin-top: 0!important
+    *:last-child
+        margin-bottom: 0!important
